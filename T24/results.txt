@@ -1,0 +1,91 @@
+Por meio dos dados, podemos perceber que apenas a melhoria com cpu resultou em speedup. O que nos leva a crer quem as diferentes formas de paralelismo nem sempre são eficientes dependendo dos dados e codigos a serem execultados e otimisados. Percebemos também que com shared o tempo foi melhor do que sem shared.
+
+===================================	sum_cuda (Sem shared) 	===================================
+
+Sum = 799999980000000.000000
+
+real	0m2.056s
+user	0m0.915s
+sys	0m1.050s
+ 
+==26047== NVPROF is profiling process 26047, command: ./sum_cuda
+
+Sum = 799999980000000.000000
+==26047== Profiling application: ./sum_cuda
+==26047== Profiling result:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 93.99%  462.69ms         1  462.69ms  462.69ms  462.69ms  [CUDA memcpy HtoD]
+  5.94%  29.226ms         1  29.226ms  29.226ms  29.226ms  sum_cuda(double*, double*, int)
+  0.07%  362.16us         1  362.16us  362.16us  362.16us  [CUDA memcpy DtoH]
+
+==26047== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 67.70%  492.96ms         2  246.48ms  29.962ms  463.00ms  cudaMemcpy
+ 32.09%  233.65ms         2  116.82ms  35.366us  233.61ms  cudaMalloc
+  0.09%  676.69us         2  338.34us  24.439us  652.25us  cudaFree
+  0.07%  483.85us        90  5.3760us     296ns  205.94us  cuDeviceGetAttribute
+  0.03%  210.59us         1  210.59us  210.59us  210.59us  cudaLaunch
+  0.01%  75.468us         1  75.468us  75.468us  75.468us  cuDeviceTotalMem
+  0.01%  69.345us         1  69.345us  69.345us  69.345us  cuDeviceGetName
+  0.00%  8.9880us         3  2.9960us     386ns  7.5750us  cudaSetupArgument
+  0.00%  2.8360us         2  1.4180us  1.0840us  1.7520us  cuDeviceGetCount
+  0.00%  1.9840us         1  1.9840us  1.9840us  1.9840us  cudaConfigureCall
+  0.00%  1.2380us         2     619ns     615ns     623ns  cuDeviceGet
+ 
+ 
+===================================	sum_cuda_shared (Com shared)	===================================
+
+Sum = 799999980000000.000000
+
+real	0m1.960s
+user	0m0.745s
+sys	0m1.121s
+ 
+==26182== NVPROF is profiling process 26182, command: ./sum_cuda_shared
+
+Sum = 799999980000000.000000
+==26182== Profiling application: ./sum_cuda_shared
+==26182== Profiling result:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 95.59%  471.01ms         1  471.01ms  471.01ms  471.01ms  [CUDA memcpy HtoD]
+  4.34%  21.374ms         1  21.374ms  21.374ms  21.374ms  sum_cuda(double*, double*, int)
+  0.07%  362.03us         1  362.03us  362.03us  362.03us  [CUDA memcpy DtoH]
+
+==26182== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 60.78%  493.83ms         2  246.91ms  23.745ms  470.08ms  cudaMemcpy
+ 39.03%  317.16ms         2  158.58ms  34.245us  317.13ms  cudaMalloc
+  0.09%  695.36us         2  347.68us  43.575us  651.78us  cudaFree
+  0.07%  590.98us        90  6.5660us     293ns  254.05us  cuDeviceGetAttribute
+  0.01%  95.451us         1  95.451us  95.451us  95.451us  cuDeviceTotalMem
+  0.01%  79.942us         1  79.942us  79.942us  79.942us  cuDeviceGetName
+  0.01%  50.599us         1  50.599us  50.599us  50.599us  cudaLaunch
+  0.00%  9.0220us         3  3.0070us     386ns  7.5330us  cudaSetupArgument
+  0.00%  3.9310us         2  1.9650us  1.1970us  2.7340us  cuDeviceGetCount
+  0.00%  2.1230us         1  2.1230us  2.1230us  2.1230us  cudaConfigureCall
+  0.00%  1.1440us         2     572ns     548ns     596ns  cuDeviceGet
+ 
+ 
+===================================	sum_seq 	===================================
+Resp: 799999980000000.000000
+
+real	0m0.663s
+user	0m0.362s
+sys	0m0.294s
+ 
+ 
+===================================	sum_cpu 	===================================
+Resp: 799999980000000.000000
+
+real	0m0.225s
+user	0m0.223s
+sys	0m0.389s
+ 
+ 
+===================================	sum_gpu 	===================================
+Resp: 799999980000000.000000
+
+real	0m1.016s
+user	0m0.131s
+sys	0m1.130s
+
