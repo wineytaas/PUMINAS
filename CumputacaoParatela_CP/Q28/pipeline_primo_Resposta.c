@@ -2,7 +2,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX_N 100000
+/*
+
+1 000
+numero de primos = 168
+
+10 000
+numero de primos = 1299 
+
+100 000
+numero de primos = 9592 
+
+10 000
+numero de primos = 1299 
+
+100 000
+numero de primos = 9592 
+
+1 000 000
+numero de primos = 78498
+
+
+*/
+
+#define MAX_N 10000000
 #define PIPE_MSG 0  
 #define END_MSG 1  
 
