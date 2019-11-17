@@ -8,14 +8,14 @@
 ## Algoritmos
 ### Força Bruta
 1. Arquivos
-	a. Graph.h
-	b. bruteForce.cpp
+	1. Graph.h
+	2. bruteForce.cpp
 
 2. Como compilar
-	a. g++ Graph.h bruteForce.cpp -o bruteForce
+	1. g++ Graph.h bruteForce.cpp -o bruteForce
 	
 3. Como executar
-	a. ./bruteForce $nomeArquivoDeEntradaDeDados
+	1. ./bruteForce $nomeArquivoDeEntradaDeDados
 
 ### Brand and Bound
 - Graph.h
