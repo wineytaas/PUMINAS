@@ -52,7 +52,7 @@
 3. Como executar
 	1. ``` ./algoritmoGenetico $nomeArquivoDeEntradaDeDados ```
 
-##Definições
+## Definições
 ### Dados de Entrada
 	Os dados devem segir o seguinte modelo:
 	```
