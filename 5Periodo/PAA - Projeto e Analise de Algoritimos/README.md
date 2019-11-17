@@ -1,6 +1,6 @@
 # Trabalho Pratico de PAA
-### Grupo: Wisney Tadeu de Almeida Assis dos Santos e Rafael Alkmim Machado
-### Profesora: Raquel Mini
+##### Grupo: Wisney Tadeu de Almeida Assis dos Santos e Rafael Alkmim Machado
+##### Profesora: Raquel Mini
 
 ## Introdução
 	Trabalho para testar a eficiencia dos algoritimos do caixeiro viajante.
@@ -12,21 +12,61 @@
 	2. bruteForce.cpp
 
 2. Como compilar
-	1. g++ Graph.h bruteForce.cpp -o bruteForce
+	1. ...
+		g++ Graph.h bruteForce.cpp -o bruteForce
+	...
 	
 3. Como executar
-	1. ./bruteForce $nomeArquivoDeEntradaDeDados
+	1. ...
+		./bruteForce $nomeArquivoDeEntradaDeDados
+	...
 
 ### Brand and Bound
-- Graph.h
-- branchBound.cpp
+1. Arquivos
+	1. Graph.h
+	2. branchBound.cpp
 
-### Programação dinâmica
-- dynamicP.h
-- dynamicPro.cpp
-
-### Programação dinâmica
-- Grafo.h
-- Grafo.cpp
-- algoritmoGenetico.cpp
+2. Como compilar
+	1. ...
+		g++ Graph.h branchBound.cpp -o branchBound
+	...
 	
+3. Como executar
+	1. ...
+		./branchBound $nomeArquivoDeEntradaDeDados
+	...
+	
+### Programação dinâmica
+1. Arquivos
+	1. dynamicP.h
+	2. dynamicPro.cpp
+
+2. Como compilar
+	1. ...
+		g++ dynamicP.h dynamicPro.cpp -o dynamic
+	...
+	
+3. Como executar
+	1. ...
+		./dynamic $nomeArquivoDeEntradaDeDados
+	...
+
+
+### Programação dinâmica
+1. Arquivos
+	1. Grafo.h
+	2. Grafo.cpp
+	3. algoritmoGenetico.cpp
+
+2. Como compilar
+	1. ... 
+		g++ Grafo.h Grafo.cpp algoritmoGenetico.cpp -o algoritmoGenetico
+	...
+	
+3. Como executar
+	1. ...
+	./algoritmoGenetico $nomeArquivoDeEntradaDeDados
+	...
+	
+### Teste
+	Para facilitar 
