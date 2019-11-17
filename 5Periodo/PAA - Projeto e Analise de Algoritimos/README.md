@@ -12,9 +12,7 @@
 	2. bruteForce.cpp
 
 2. Como compilar
-	1. ```
-		g++ Graph.h bruteForce.cpp -o bruteForce
-	```
+	1. ``` g++ Graph.h bruteForce.cpp -o bruteForce ```
 	
 3. Como executar
 	1. ```
