@@ -50,8 +50,7 @@
 	1. ```  g++ Grafo.h Grafo.cpp algoritmoGenetico.cpp -o algoritmoGenetico ```
 	
 3. Como executar
-	1. ```
-	./algoritmoGenetico $nomeArquivoDeEntradaDeDados ```
+	1. ``` ./algoritmoGenetico $nomeArquivoDeEntradaDeDados ```
 
 ##Definições
 ### Dados de Entrada
