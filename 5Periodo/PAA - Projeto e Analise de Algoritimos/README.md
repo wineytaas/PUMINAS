@@ -82,5 +82,5 @@ A  entrada  deve  ser lida  de  um  arquivo  texto  com  números  inteiros.  O 
 
 ## Teste
 
-Para facilitar os testes dos algoritimos foram criados os __compiler_run[algoritmo].sh__ esse arquivo bash exuculta cada código 10 vezes para um numero determinado de testes especificados por parametro, os testes aumentam o número de cidades de dois em dois. O código cria os dados de entrada caso os mesmo não existam na pasta **DadosEntrata**.
+Com o intuito de facilitar os nossos testes foram criados alguns scripts bash. O primeiro a ser implementado foi o __creatFile.sh__ com o intuito de criar os arquivos de entrada que possuem em sua primeira linha o número de cidades (n) que estão no seu interior e nas n linhas seguintes temos as coordenadas das cidades x e y, para facilitar a identificação dos arquivos criados os seus nomes seguem seguinte padrão __DadosEntrada[n].sh__ . O segunda script bash foi o __compiler_run.sh__ ,esse script execulta um número determinado de testes que seguem a seguinte ordem: executa o primeiro script e posteriormente compila e executa 10 vezes os códigos gerados com os arquivos de entrada criados anteriormente. As saídas são enviadas para dois arquivos um com as saídas dos programas, outro com os tempos de execução de cada um.
 	
