@@ -9,7 +9,6 @@
 #define INFINITE 2147483647
 
 using namespace std;
-char* FileName;
 
 /*
  Classe criada no intuito de armazenar um caminho percorrido no grafo
@@ -407,49 +406,22 @@ void cronometrando() {
 /*
 Processa as entradas de acordo com o especificado e trata com força bruta; 
 */
-void dynamicProgramming(int nargs, char *args[]) {
-	printf("%s\n", args[1]);
-	FileName = args[1];
-	
+void dynamicProgramming() {
     cout << setprecision(2) << fixed;
 
-    int n;
-	FILE *arq;
-	
-	// Abre um arquivo TEXTO para LEITURA
-	arq = fopen(FileName, "rt");
-	
-	fscanf(arq, "%d", &n);
-	
-	vector<Coordenada*>* cidades = new vector<Coordenada*>();
+    unsigned int n;
+    cin >> n;
+
+    vector<Coordenada*>* cidades = new vector<Coordenada*>();
     cidades->reserve(n);
-	
-	int valor;
-	for(int numLinha = 0; numLinha < n; numLinha++) //Le até o final do arquivo
-	{
-		Coordenada* c = new Coordenada();
-		
-		//Lê x da cidade
-		fscanf(arq, "%d", &valor);
-		c->x = valor;
 
-		//Lê y da cidade
-		fscanf(arq, "%d", &valor);
-		c->y = valor;
-		
-		cidades->push_back(c);
-	}
-	
+    for (unsigned i = 0; i < n; i++) {
+        Coordenada* c = new Coordenada();
+        cin >> c->x;
+        cin >> c->y;
 
-	fclose(arq);
-	
-	// for (unsigned i = 0; i < n; i++) {
-        // Coordenada* c = new Coordenada();
-        // cin >> c->x;
-        // cin >> c->y;
-
-        // cidades->push_back(c);
-    // }
+        cidades->push_back(c);
+    }
 
     Grafo* grafo = new Grafo(cidades);
 

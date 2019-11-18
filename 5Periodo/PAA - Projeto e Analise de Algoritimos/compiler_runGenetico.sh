@@ -3,8 +3,8 @@
 # final=$(( $1 + 1 ));
 
 # for i in $( seq 2 $final );
-arquivoTempos="TimeOutGenetico${1}.out"
-arquivoSaidas="outGenetico${1}.out"
+arquivoTempos="TimeOutGenetico${1}_Print.out"
+arquivoSaidas="outGenetico${1}_Print.out"
 numTestes=10
 
 if [ ! -d './DadosEntrada' ]
@@ -22,45 +22,9 @@ do
 	
 	./creatFile.sh ${valor} $nomeArquivo
 	
-	# echo "" >> $arquivoTempos; echo "" >> $arquivoSaidas;
-	# echo "" >> $arquivoTempos; echo "" >> $arquivoSaidas;
-	# # echo "==================================================================================" >> $arquivoTempos;
-	# # echo "==================================================================================" >> $arquivoSaidas;
-	
-	# echo "" >> $arquivoTempos; echo "" >> $arquivoSaidas;
-	# echo "================================  Brute Force (${valor})  ================================" >> $arquivoSaidas;
-	# echo "================================  Brute Force (${valor})  ================================" >> $arquivoTempos;
-	
-	# g++ Graph.h bruteForce.cpp -o bruteForce
-	# for teste in $( seq 1 $numTestes )
-	# do
-		# (time ./bruteForce $nomeArquivo >> $arquivoSaidas) 2>> $arquivoTempos
-	# done
-	
-	# echo "" >> $arquivoTempos; echo "" >> $arquivoSaidas;
-	# echo "================================  Branch and bound (${valor})  ================================" >> $arquivoSaidas;
-	# echo "================================  Branch and bound (${valor})  ================================" >> $arquivoTempos;
-	
-	# g++ Graph.h branchBound.cpp -o branchBound
-	# for teste in $( seq 1 $numTestes )
-	# do
-		# (time ./branchBound $nomeArquivo >> $arquivoSaidas) 2>> $arquivoTempos
-	# done
-	
-	# echo "" >> $arquivoTempos; echo "" >> $arquivoSaidas;
-	# echo "================================  Programação dinâmica (${valor})  ================================" >> $arquivoSaidas;
-	# echo "================================  Programação dinâmica (${valor})  ================================" >> $arquivoTempos;
-	
-	# g++ dynamicP.h dynamicPro.cpp -o dynamic
-	# for teste in $( seq 1 $numTestes )
-	# do
-		# (time ./dynamic $nomeArquivo >> $arquivoSaidas) 2>> $arquivoTempos
-		
-	# done
-	
-	# echo "" >> $arquivoTempos; echo "" >> $arquivoSaidas;
-	# echo "================================  Algoritmo genético (${valor})  ================================" >> $arquivoSaidas;
-	# echo "================================  Algoritmo genético (${valor})  ================================" >> $arquivoTempos;
+	echo "" >> $arquivoTempos; echo "" >> $arquivoSaidas;
+	echo "================================  Algoritmo genético (${valor})  ================================" >> $arquivoSaidas;
+	echo "================================  Algoritmo genético (${valor})  ================================" >> $arquivoTempos;
 	
 	g++ Grafo.h Grafo.cpp algoritmoGenetico.cpp -o algoritmoGenetico
 	for teste in $( seq 1 $numTestes )

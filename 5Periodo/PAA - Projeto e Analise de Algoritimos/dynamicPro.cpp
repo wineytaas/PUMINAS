@@ -1,8 +1,8 @@
 #include "dynamicP.h"
 
-int main(int nargs, char *args[])
-{
-	dynamicProgramming(nargs, args);
+int main(){
+
+	dynamicProgramming();
 
     return 0;
 

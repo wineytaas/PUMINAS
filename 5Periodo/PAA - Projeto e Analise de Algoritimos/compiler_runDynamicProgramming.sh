@@ -54,7 +54,7 @@ do
 	g++ dynamicP.h dynamicPro.cpp -o dynamic
 	for teste in $( seq 1 $numTestes )
 	do
-		(time ./dynamic $nomeArquivo >> $arquivoSaidas) 2>> $arquivoTempos	
+		(time ./dynamic < $nomeArquivo >> $arquivoSaidas) 2>> $arquivoTempos	
 	done
 	
 	# echo "" >> $arquivoTempos; echo "" >> $arquivoSaidas;

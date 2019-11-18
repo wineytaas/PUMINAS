@@ -22,6 +22,10 @@
 
 	``` ./bruteForce $nomeArquivoDeEntradaDeDados ```
 
+4. Como executar o teste
+
+	``` ./compiler_runBrutForce.sh [numeroDeTestes] ```
+
 ### Brand and Bound
 
 1. Arquivos
@@ -36,6 +40,10 @@
 3. Como executar
 
 	``` ./branchBound $nomeArquivoDeEntradaDeDados ```
+	
+4. Como executar o teste
+
+	``` ./compiler_runBrandAndBound.sh [numeroDeTestes] ```
 	
 ### Programação dinâmica
 
@@ -52,6 +60,9 @@
 
 	``` ./dynamic $nomeArquivoDeEntradaDeDados ```
 
+4. Como executar o teste
+
+	``` ./compiler_runDynamicProgramming.sh [numeroDeTestes] ```
 
 ### Programação dinâmica
 
@@ -68,6 +79,10 @@
 3. Como executar
 
 	``` ./algoritmoGenetico $nomeArquivoDeEntradaDeDados ```
+
+4. Como executar o teste
+
+	``` ./compiler_runGenetico.sh [numeroDeTestes] ```
 
 ## Definições
 ### Dados de Entrada

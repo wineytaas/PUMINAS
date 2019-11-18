@@ -3,8 +3,8 @@
 # final=$(( $1 + 1 ));
 
 # for i in $( seq 2 $final );
-arquivoTempos="TimeOutBrantAndBound${1}_Print.out"
-arquivoSaidas="outBrantAndBound${1}_Print.out"
+arquivoTempos="TimeOutBrutForce${1}_Print.out"
+arquivoSaidas="outBrutForce${1}_Print.out"
 numTestes=10
 
 if [ ! -d './DadosEntrada' ]
@@ -23,13 +23,13 @@ do
 	./creatFile.sh ${valor} $nomeArquivo
 	
 	echo "" >> $arquivoTempos; echo "" >> $arquivoSaidas;
-	echo "================================  Branch and bound (${valor})  ================================" >> $arquivoSaidas;
-	echo "================================  Branch and bound (${valor})  ================================" >> $arquivoTempos;
+	echo "================================  Brute Force (${valor})  ================================" >> $arquivoSaidas;
+	echo "================================  Brute Force (${valor})  ================================" >> $arquivoTempos;
 	
-	g++ Graph.h branchBound.cpp -o branchBound
+	g++ Graph.h bruteForce.cpp -o bruteForce
 	for teste in $( seq 1 $numTestes )
 	do
-		(time ./branchBound $nomeArquivo >> $arquivoSaidas) 2>> $arquivoTempos
+		(time ./bruteForce $nomeArquivo >> $arquivoSaidas) 2>> $arquivoTempos
 	done
 	
 sed -i '/^user/d' $arquivoTempos 		#Remove as linhas que começam a palavra 'user'
