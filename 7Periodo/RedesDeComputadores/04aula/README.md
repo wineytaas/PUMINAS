@@ -10,4 +10,4 @@
 - open mp
 - seção critica
 - compilar usando : g++ .\tenis.cpp -o .\tenis -fopenmp
-- compilar Executar : .\tenis
+- Executar : .\tenis
